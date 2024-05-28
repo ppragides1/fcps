@@ -1,0 +1,125 @@
+@import '../variables';
+@import '../mixins';
+
+.footer {
+    @include flex-col;
+    width: 100%;
+    background: $primary-color;
+    position: relative;
+    bottom: 0;
+
+    &-container {
+        @include flex-col;
+        justify-content: space-between;
+        margin: 8vh 8vh 4vh 8vh;
+    }
+
+    &-links {
+        @include flex-col;
+        justify-content: space-between;
+
+        // padding: 20px 0;
+        // border-bottom: 1px solid $secondary-color;
+        p {
+            color: $light-teal;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            @include flex-col;
+            justify-content: space-between;
+            padding: 0;
+
+            li {
+                list-style: none;
+                margin: 5px 0;
+
+                a {
+                    color: $link-color;
+                    font-size: 0.9rem;
+                    transition: all 0.3s ease-in-out;
+
+
+                    &:hover {
+                        color: $light-teal;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &-social {
+        @include flex-col;
+
+        // justify-content: space-between;
+        // padding: 10px 0;
+        p {
+            color: $light-teal;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            @include flex-row;
+            // justify-content: space-between;
+            padding: 0;
+            gap: 2vh;
+
+            li {
+                list-style: none;
+                margin: 5px 0;
+            }
+
+            i {
+                font-size: 1.5rem;
+                color: $link-color;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    color: $light-teal;
+                }
+
+            }
+        }
+    }
+
+    &-copyright {
+        @include flex-col;
+        justify-content: space-between;
+        // padding: 20px 0;
+        align-items: center;
+        justify-content: center;
+        background-color: $secondary-color;
+
+        p {
+            color: $light-teal;
+            font-size: 0.8rem;
+        }
+    }
+
+
+
+
+    @media (min-width: 760px) {}
+
+    @media (min-width: 960px) {
+        @include flex-col;
+        justify-content: space-between;
+        position: relative;
+        bottom: 0;
+
+        &-container {
+            @include flex-row;
+            justify-content: space-between;
+            // margin: 0 auto;
+        }
+
+    }
+
+}

@@ -1,0 +1,44 @@
+@import '../variables';
+@import '../mixins';
+
+.home {
+    @include flex-col;
+
+    &-container {
+        @include flex-col;
+        justify-content: space-between;
+
+        h2 {
+            font-family: $primary-font;
+            margin: 0;
+            padding: 0;
+            color: $secondary-color;
+            font-size: 1.4rem;
+        }
+
+        p {
+            font-family: $primary-font;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            color: $dark-grey;
+        }
+    }
+
+    &-heading {
+        @include flex-col;
+
+
+        h1 {
+            font-size: 2.3rem;
+            line-height: 2.9rem;
+            font-weight: 700;
+            color: $primary-color;
+        }
+
+
+    }
+
+    @media (min-width: 760px) {}
+
+    @media (min-width: 960px) {}
+}

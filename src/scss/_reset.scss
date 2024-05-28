@@ -1,0 +1,67 @@
+@import './variables';
+@import './mixins';
+
+
+
+/* CSS Reset */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+    font-family: $secondary-font;
+    font-weight: 700;
+    color: $primary-color;
+
+}
+
+p,
+td {
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $dark-grey;
+}
+
+a {
+    text-decoration: none;
+    color: $link-color;
+    font-family: $primary-font;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+}
+
+main {
+    @include flex-col;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 70vh;
+}
+
+@media (min-width: 960px) {
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 8vh;
+    }
+}
